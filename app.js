@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 1010;
+const port = 3210;
 const {
   loadContact,
   findContact,
@@ -32,27 +32,28 @@ app.use(
 );
 app.use(flash());
 
-app.get("/", (req, res) => {
-  const pegawai = [
-    {
-      nama: "Ajun Bagas",
-      email: "ajunbagas@gmail.com",
-    },
-    {
-      nama: "Sarah Apriliani",
-      email: "sarahapr@gmail.com",
-    },
-    {
-      nama: "Gustav Kennedy",
-      email: "gustavken@gmail.com",
-    },
+app.get('/', (req, res) => {
+  const title = 'Web Server NodeJs';
+  const nama = 'Adisty Nurharumandari';
+  const mahasiswa = [
+      {
+          nama: 'Adisty Nurharumandari',
+          email: 'adistydidis095@gmail.com',
+      },
+      {
+          nama: 'Yuswo Cahyo Santoso',
+          email: 'yuswocahyo@gmail.com',
+      },
+      {
+          nama: 'Kenzi Yuswodari',
+          email: 'yuswodari_kenz@gmail.com',
+      },
   ];
-
-  res.render("index", {
-    layout: "layouts/main-layout",
-    title: "Homepage",
-    email: "ujangs@yandex.com",
-    pegawai: pegawai,
+  res.render('index', { 
+      title,
+      nama,
+      mahasiswa,
+      layout: 'layouts/main-layout',
   });
 });
 

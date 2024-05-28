@@ -1,23 +1,22 @@
 <h1>Hello World</h1>
 <p>Welcome to node web server...</p>
 
-<% const name='Ujang Jumbo' %>
-    <h2>Hello, <%= name %>
-    </h2>
-    <h4>
-        <%= email %>
-    </h4>
+<% const name = 'Adisty Nurharumandari'; %>
+<h2>Hello, <%= name %></h2>
 
-    <h4>Daftar pegawai-pegawai</h4>
-    <% if (pegawai.length < 1) { %>
-        <p>Data Pegawai masih kosong...</p>
-        <% } else { %>
-            <% pegawai.forEach(pgw=> { %>
-                <ul>
-                    <li>Nama: <%= pgw.nama %>
-                    </li>
-                    <li>Email: <%= pgw.email %>
-                    </li>
-                </ul>
-                <% }) %>
-            <% } %>
+<% const email = 'adistydidis095@gmail.com'; %> <!-- Define the email variable -->
+
+<h4><%= email %></h4>
+<br>
+
+<h4>Daftar Mahasiswa-Mahaswi</h4>
+<% if (mahasiswa.length < 1) { %>
+    <p>Data mahasiswa masih kosong...</p>
+<% } else { %>
+    <% mahasiswa.forEach(mhs => { %>
+        <ul>
+            <li>Nama: <%= mhs.nama %></li>
+            <li>Email: <%= mhs.email %></li>
+        </ul>
+    <% }); %>
+<% } %>
